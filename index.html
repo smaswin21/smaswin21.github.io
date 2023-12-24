@@ -18,6 +18,8 @@
                 <li><a href="#header">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#Skills">Skills</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <i class="fas fa-times" onclick="closemenu()"></i>
             </ul>
@@ -29,6 +31,8 @@
         </div>
     </div>
 </div>
+
+<!-- -----------about---------- -->
 
 <div id="about">
     <div class="container">
@@ -47,9 +51,9 @@
                 </div>
                 <div class="tab-contents active-tab" id="skills">
                     <ul>
-                        <li><span>Machine Learning</span><br>Focused on Neural Networks</li>
-                        <li><span>Data Science </span><br>Using Machine Learning</li>
-                        <li><span>Robotics & AI</span><br>Focused on Computer Vision</li>
+                        <li><span>Machine Learning</span><br>Specializing in neural network architectures like CNNs for image recognition and RNNs for natural language processing. Proficient in TensorFlow and PyTorch frameworks.</li>
+                        <li><span>Data Science </span><br>Learning statistical analysis, predictive modeling, and data visualization. Experienced with Python libraries like Scklean & Matplotlib</li>
+                        <li><span>Robotics & AI</span><br>Interested in designing autonomous systems using computer vision techniques.</li>
                     </ul>
                 </div>
                 <div class="tab-contents" id="experience">
@@ -62,14 +66,13 @@
                 <div class="tab-contents" id="education">
                     <ul>
                         <li><span>2022 - 2026</span><br>Computer Science & AI, IE University, Madrid, Spain</li>
-                        <li><span>2022</span><br>Hindustan International School, Chennai, India</li>
+                        <li><span>2018 - 2022</span><br>Hindustan International School, Chennai, India</li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 
 <!-- ----------portfolio------------ -->
 
@@ -112,6 +115,58 @@
         </div>
         <a href="#" class="btn">See more</a>
 </div>
+
+
+<!-- ---------- Hobbies Section ----------- -->
+<div id="hobbies">
+    <div class="container">
+        <h1 class="sub-title">Hobbies</h1>
+
+        <!-- Books Subsection -->
+        <div class="hobby-category">
+            <h2 class="hobby-title">Books</h2>
+            <div class="hobby-items">
+                <!-- Replace with your actual image sources and links -->
+                <div class="hobby-item">
+                    <img src="images/book-1.png" alt="Book 1">
+                    <a href="https://books.google.com/book1" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+                <div class="hobby-item">
+                    <img src="images/book-2.png" alt="Book 2">
+                    <a href="https://books.google.com/book2" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+                <!-- Add more books as needed -->
+            </div>
+        </div>
+
+        <!-- Movies Subsection -->
+        <div class="hobby-category">
+            <h2 class="hobby-title">Movies</h2>
+            <div class="hobby-items">
+                <!-- Replace with your actual image sources and links -->
+                <div class="hobby-item">
+                    <img src="images/movie-1.png" alt="Movie 1">
+                    <a href="https://www.imdb.com/title/movie1" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+                <div class="hobby-item">
+                    <img src="images/movie-2.png" alt="Movie 2">
+                    <a href="https://www.imdb.com/title/movie2" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+                <!-- Add more movies as needed -->
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
 <!-- ----------contact------------- -->
 <div id="contact">
     <div class="container">
@@ -144,6 +199,8 @@
     </div>
 </div>
 
+
+
 <script>
 
     var tablinks = document.getElementsByClassName("tab-links");
@@ -174,24 +231,23 @@
     }
 
 </script>
-
-  <form name="submit-to-google-sheet">
-    <input name="email" type="email" placeholder="Email" required>
-    <button type="submit">Send</button>
-  </form>
-  
-  <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxgNn4l77bhtrDljnXD9EsmPeSqejSiVYTHOuKUObDl6RV76zIsQL_ITz0CNKxPzasoMQ/exec'
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxgNn4l77bhtrDljnXD9EsmPeSqejSiVYTHOuKUObDl6RV76zIsQL_ITz0CNKxPzasoMQ/exec' // add your own app script link here
     const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
   
     form.addEventListener('submit', e => {
       e.preventDefault()
       fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => console.log('Success!', response))
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
         .catch(error => console.error('Error!', error.message))
     })
   </script>
-
 </body>
 </html>
-
