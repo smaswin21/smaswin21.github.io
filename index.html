@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Computer Science & AI Student @ IE University</p>
+            <h1>Hi, I'm <span>Aswin</span><br>from India</h1>
+        </div>
+    </div>
+</div>
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Enthusiastic and hard-working computer science student with deep passion for machine learning, Generative AI and Robotics.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Machine Learning</span><br>Focused on Neural Networks</li>
+                        <li><span>Data Science </span><br>Using Machine Learning</li>
+                        <li><span>Robotics & AI</span><br>Focused on Computer Vision</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2023 - Current</span><br>Junior Developer @IE Robotics & AI Lab</li>
+                        <li><span>2022 - Curent</span><br>Content Coordinator @ IE Coding Club</li>
+                        <li><span>2022</span><br>Intern @ IE Econ-Data Lab</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2022 - 2026</span><br>Computer Science & AI, IE University, Madrid, Spain</li>
+                        <li><span>2022</span><br>Hindustan International School, Chennai, India</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- ----------portfolio------------ -->
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.png">
+                <div class="layer">
+                    <h3>Peppers & Emoji</h3>
+                    <p>This project aims to use OpenCV, DeepFace algorithms to detect emotions and convert them to emojis helping children with Autism improve social skills, inspired from (Google Glasses + Stanford).</p>
+                    <a href="https://github.com/smaswin21/pepper-emoji"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.png">
+                <div class="layer">
+                    <h3>Asteroids--an-arcade-game</h3>
+                    <p>This is one of the most popular arcade games, Asteroid made using pygame, recursive algorithms and efficient data structures.</p>
+                    <a href="https://github.com/smaswin21/Asteroids--an-arcade-game"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-3.png">
+                <div class="layer">
+                    <h3>Madrid Nightlife (focused on backend of website)</h3>
+                    <p>This project, focused on backend to understand the role of databases is developed by us servers as a comprehensive guide to the vibrant clubbing scene in Madrid. It offers detailed insights into various clubs, events, and nightlife experiences in the city, making it an essential resource for party-goers and nightlife enthusiasts.</p>
+                    <a href="https://github.com/smaswin21/clubbing_databases"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-4.png">
+                <div class="layer">
+                    <h3>Borat Programmin-Language</h3>
+                    <p>The Borat Programming Language project, where we've created an interpreted programming language inspired by the iconic character Borat. This project is a unique blend of humor and technical skill, aimed at providing a fresh perspective on programming language design and implementation using C.</p>
+                    <a href="https://github.com/smaswin21/Borat-Language"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+</div>
+<!-- ----------contact------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fas fa-paper-plane"></i> sm.aswin21@gmail.com</p>
+                <p><i class="fas fa-phone-square-alt"></i> +34 696 085 856 / +91 9150 865 886</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/sm_aswin21" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/aswin-subramanian-maheswaran-3b9a2323b" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/smaswin21" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                    <a href="https://medium.com/@sm.aswin21" target="_blank" rel="noopener noreferrer"><i class="fab fa-medium"></i></a>
+                </div>
+                <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Aswin. Made with HTML, CSS & JS <i class="fas fa-heart"></i> 
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+
+    var sidemeu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemeu.style.right = "0";
+    }
+    function closemenu(){
+        sidemeu.style.right = "-200px";
+    }
+
+</script>
+
+  <form name="submit-to-google-sheet">
+    <input name="email" type="email" placeholder="Email" required>
+    <button type="submit">Send</button>
+  </form>
+  
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxgNn4l77bhtrDljnXD9EsmPeSqejSiVYTHOuKUObDl6RV76zIsQL_ITz0CNKxPzasoMQ/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+</body>
+</html>
+
