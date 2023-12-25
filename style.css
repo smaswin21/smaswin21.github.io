@@ -14,7 +14,7 @@ body{
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url(images/background.png);
+    background-image: url(images/bg.png);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -72,10 +72,11 @@ nav ul li a:hover::after{
 }
 /* -----------about--------------- */
 
-
 #about{
     padding: 80px 0;
     color: #ababab;
+    background-image: url(images/bg.png);
+    
 }
 .row{
     display: flex;
@@ -199,6 +200,7 @@ nav .dropdown:hover .dropdown-content {
 /* -------portfolio----------- */
 #portfolio{
     padding: 50px 0;
+    background-image: url(images/bg.png);
 }
 .work-list{
     display: grid;
@@ -274,6 +276,7 @@ nav .dropdown:hover .dropdown-content {
 
     #hobbies {
         padding: 50px 0;
+        background-image: url(images/bg.png);
         
     }
     .hobby-category {
@@ -282,7 +285,7 @@ nav .dropdown:hover .dropdown-content {
     .hobby-title {
         font-size: 1.5em;
         margin-bottom: 20px;
-        color: #333; /* Dark color for titles */
+        color: #ff0000c1; /* Dark color for titles */
     }
     .hobby-items {
         display: flex;
@@ -320,7 +323,70 @@ nav .dropdown:hover .dropdown-content {
     }
 
 
+/* Skills */
 
+.section {
+    color: #fff;
+    padding: 40px 0;
+    background-image: url(images/bg.png);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.skills-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.skills-block {
+    flex-basis: calc(33.333% - 20px); /* Adjust the space between the columns */
+    margin-bottom: 20px;
+    transition: transform 0.3s ease; /* Smooth scaling transition */
+}
+
+.skills-block:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.skills-block h2 {
+    margin-bottom: 15px;
+    color: #ff004f; /* Your theme's highlight color */
+}
+
+.skills-block ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills-block ul li {
+    background: #222; /* Slightly lighter background for each skill */
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow for depth */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.skills-block ul li:hover {
+    background: #ff004f; /* Highlight color on hover */
+    color: #080808; /* Dark text on hover for contrast */
+}
+
+@media (max-width: 768px) {
+    .skills-grid {
+        flex-direction: column;
+    }
+
+    .skills-block {
+        flex-basis: 100%;
+        margin-bottom: 30px;
+    }
+}
 
 /* ---------contact-------- */
 .contact-left{
@@ -380,7 +446,6 @@ form .btn2{
     width: 100%;
     text-align: center;
     padding: 25px 0;
-    background: #262626;
     font-weight: 300;
     margin-top: 20px;
 }
