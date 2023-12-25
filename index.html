@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Link to External JavaScript File -->
+    <script src="script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
 </head>
@@ -18,8 +20,15 @@
                 <li><a href="#header">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#Skills">Skills</a></li>
-                <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#technicalskills">Technical Skills</a></li>
+                <!-- <li><a href="#hobbies">Hobbies</a></li> -->
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn" onclick="toggleDropdown()">Hobbies</a>
+                    <div class="dropdown-content" id="hobbiesDropdown">
+                        <a href="#books">Books</a>
+                        <a href="#movies">Movies</a>
+                    </div>
+                </li>                
                 <li><a href="#contact">Contact</a></li>
                 <i class="fas fa-times" onclick="closemenu()"></i>
             </ul>
@@ -32,13 +41,14 @@
     </div>
 </div>
 
+
 <!-- -----------about---------- -->
 
 <div id="about">
     <div class="container">
         <div class="row">
             <div class="about-col-1">
-                <img src="images/user.png">
+                <img src="images/user21.png">
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
@@ -73,6 +83,7 @@
         </div>
     </div>
 </div>
+
 
 <!-- ----------portfolio------------ -->
 
@@ -123,34 +134,42 @@
         <h1 class="sub-title">Hobbies</h1>
 
         <!-- Books Subsection -->
-        <div class="hobby-category">
+        <div class="hobby-category" id="books">
             <h2 class="hobby-title">Books</h2>
             <div class="hobby-items">
                 <!-- Replace with your actual image sources and links -->
                 <div class="hobby-item">
-                    <img src="images/book-1.png" alt="Book 1">
-                    <a href="https://books.google.com/book1" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                    <img src="images/book-s.png" alt="Book 1">
+                    <a href="https://www.oreilly.com/library/view/introduction-to-machine/9781449369880/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
                 </div>
                 <div class="hobby-item">
                     <img src="images/book-2.png" alt="Book 2">
-                    <a href="https://books.google.com/book2" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                    <a href="https://www.simonandschuster.com/books/Steve-Jobs/Walter-Isaacson/9781982176860" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+                <div class="hobby-item">
+                    <img src="images/book-3.png" alt="Book 3">
+                    <a href="https://www.google.es/books/edition/Anxious_People/v_2-DwAAQBAJ" target="_blank"><i class="fas fa-external-link-alt"></i></a>
                 </div>
                 <!-- Add more books as needed -->
             </div>
         </div>
 
         <!-- Movies Subsection -->
-        <div class="hobby-category">
+        <div class="hobby-category" id="movies">
             <h2 class="hobby-title">Movies</h2>
             <div class="hobby-items">
                 <!-- Replace with your actual image sources and links -->
                 <div class="hobby-item">
                     <img src="images/movie-1.png" alt="Movie 1">
-                    <a href="https://www.imdb.com/title/movie1" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                    <a href="https://www.imdb.com/title/tt1375666/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
                 </div>
                 <div class="hobby-item">
                     <img src="images/movie-2.png" alt="Movie 2">
-                    <a href="https://www.imdb.com/title/movie2" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                    <a href="https://www.miramax.com/movie/good-will-hunting/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+                <div class="hobby-item">
+                    <img src="images/movie-3.png" alt="Movie 2">
+                    <a href="https://www.miramax.com/movie/good-will-hunting/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
                 </div>
                 <!-- Add more movies as needed -->
             </div>
@@ -159,12 +178,52 @@
     </div>
 </div>
 
+<script>
+    // Optional: If you want to use JavaScript to handle the dropdown
+    document.addEventListener('DOMContentLoaded', function() {
+        var dropdown = document.querySelector('.dropbtn');
+        dropdown.onclick = function() {
+            var content = this.nextElementSibling;
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+            } else {
+                content.style.display = 'block';
+            }
+        };
+    });
+</script>
 
+</body>
+</html>
 
-
-
-
-
+<!-- Technical Skills Section -->
+<div id="technical-skills">
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="skills-container">
+        <div class="skills-category">
+            <h3>Programming Languages</h3>
+            <div class="skills">C</div>
+            <div class="skills">Python</div>
+            <div class="skills">R</div>
+            <div class="skills">MYSQL</div>
+        </div>
+        <div class="skills-category">
+            <h3>Frameworks</h3>
+            <div class="skills">Django</div>
+            <div class="skills">Flutter</div>
+        </div>
+        <div class="skills-category">
+            <h3>Libraries, Tools & Platforms</h3>
+            <div class="skills">Git</div>
+            <div class="skills">IBM SPSS</div>
+            <div class="skills">ML modeling</div>
+            <div class="skills">scikit-learn</div>
+            <div class="skills">Azure</div>
+            <div class="skills">Ubuntu</div>
+            <div class="skills">OpenCV</div>
+        </div>
+    </div>
+</div>
 
 
 <!-- ----------contact------------- -->
@@ -198,7 +257,6 @@
         <p>Copyright © Aswin. Made with HTML, CSS & JS <i class="fas fa-heart"></i> 
     </div>
 </div>
-
 
 
 <script>

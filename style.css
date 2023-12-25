@@ -141,6 +141,61 @@ nav ul li a:hover::after{
     display: block;
 }
 
+/* Dropdown Button */
+/* Existing styles for navigation bar items */
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+/* Add styles for the dropdown button to match other nav items */
+nav .dropdown .dropbtn {
+    background-color: transparent; /* Match nav background */
+    color: white; /* Match nav item text color */
+    padding: 16px 20px; /* Match nav item padding */
+    font-size: 18px; /* Match nav item font size */
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Style the dropdown content to match the theme */
+nav .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #080808; /* Match the dropdown with the nav background */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Style the links inside the dropdown */
+nav .dropdown-content a {
+    color: white; /* Match the text color with nav items */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change the color of dropdown links on hover */
+nav .dropdown-content a:hover {
+    background-color: #333; /* A lighter shade for hover */
+}
+
+/* Display dropdown content on click */
+nav .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
 /* -------portfolio----------- */
 #portfolio{
     padding: 50px 0;
@@ -263,6 +318,9 @@ nav ul li a:hover::after{
             width: calc(50% - 10px); /* Two items per row on smaller screens */
         }
     }
+
+
+
 
 /* ---------contact-------- */
 .contact-left{
@@ -402,3 +460,6 @@ nav .fas{
     margin-top: -40px;
     display: block;
 }
+
+
+
